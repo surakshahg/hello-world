@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>salesman</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style>
+#app{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+ 
+}
+.data-tablee{
+  border: 1px solid #ddd;
+}
+</style>
+
+<body>
+  <div class="container">
+<div id="app">
+  <!--
+    A data-table example using it's props and @select handler
+  -->
+  <data-tablee
+    :cols="cols"
+    :rows="rows"
+    selectable
+    @select="(items) => selected = items"
+  ></data-tablee>
+
+  <!--
+   used to display the checkbox value selected in the table 
+  -->
+<!--   <transition-group
+    tag="ul"
+    name="selected-users"
+    class="selected-users"
+  >
+    <li class="label" :key="'label'">Selected users:</li>
+    <li
+      v-for="name in selected.map((_) => _.name)"
+      class="user"
+      :key="name"
+    >{{ name }}</li>
+  </transition-group> -->
+
+  <!--
+    another example using rows as slots
+  -->
+
+</div>
+</div>
+      <script src="vue.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+      <script src="https://cdn.rawgit.com/VitorLuizC/vue-data-tablee/master/dist/vue-data-tablee.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">      
+   <script type = "text/javascript" src = "instance1.js"></script>
+</body>
+</html>

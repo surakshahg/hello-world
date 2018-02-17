@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>salesman</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <h1 style="color:#1b65a0;">Sales leaderboard analysis </h1>
+  </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="img/salesman1.jpg" alt="" />
+                </div>
+                <div class="content" id="">
+                    <p v-bind:title="message">Sales person1 <br>More description here</p>
+                    <p><button type="button" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" id="app-2">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="img/salesman2.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <p>Sales person2 <br> More description here</p>
+                    <p><button type="button" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img src="img/salesman3.jpg" alt="" />
+                </div>
+                <div class="content">
+                    <p>Sales person3 <br>More description here</p>
+                    <p><button type="button" class="btn btn-default">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="container">
+    <p style="color: #1b65a0;font-size: 18px">Rate of sales made by each employee every month<span style="text-align:right;display: block;margin-top: -24px;">Want to enter new sales details?<button style="margin-left: 10px;" class=" btn btn-primary">Click here</button></span></p>
+    <form>
+      <div class="form-group">
+      <label for="EmployeeID">Employee ID</label>
+      <input type="text" class="form-control" id="EmployeeID" placeholder="Employee ID">
+    </div>
+    <div class="form-group">
+      <label for="Employeename">Employee Name</label>
+      <input type="text" class="form-control" id="Employeename" placeholder="Employee Name">
+    </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="Salesrate">Sales Rate</label>
+    <input type="text" class="form-control" id="Salesrate" placeholder="Sales made">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<h1></h1>
+<p></p>
+<div id="app">
+  <v-app id="inspire">
+    <v-data-table
+      :headers="headers"
+      :items="items"
+      hide-actions
+      class="elevation-1"
+    >
+      <template slot="items" slot-scope="props">
+        <td class="text-xs-right">{{ props.item.name }}</td>
+        <td class="text-xs-right">{{ props.item.LastName }}</td>
+        <td class="text-xs-right">{{ props.item.Salesmade }}</td>
+        <td class="text-xs-right">{{ props.item.datejoined }}</td>
+      </template>
+    </v-data-table>
+  </v-app>
+</div>   
+  </div>
+
+      <script src="js/vue.js"></script>
+      <script src="https://unpkg.com/babel-polyfill/dist/polyfill.min.js"></script>
+      <script src="https://unpkg.com/vue/dist/vue.js"></script>
+      <script src="https://unpkg.com/vuetify@1.0.0/dist/vuetify.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+   <script type = "text/javascript" src = "js/instance.js"></script>
+</body>
+</html>
